@@ -121,7 +121,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-4 justify-center">
           <button
             onClick={() => router.push("/stack")}
-            className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white"
+            className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
           >
             Ma Stack
           </button>
@@ -134,13 +134,13 @@ export default function Home() {
           <a
             href="/cv.pdf"
             download
-            className="px-6 py-3 text-gray-700 rounded-lg border-2 border-gray-700 transition-colors dark:text-gray-200 dark:border-gray-200 hover:bg-gray-700 hover:text-white dark:hover:bg-gray-200 dark:hover:text-gray-900"
+            className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-700 hover:text-white dark:hover:text-white"
           >
             Télécharger CV
           </a>
           <button
             onClick={() => router.push("/contact")}
-            className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white"
+            className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
           >
             Me Contacter
           </button>
