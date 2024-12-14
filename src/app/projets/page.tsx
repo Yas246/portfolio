@@ -3,8 +3,8 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import ImageSlider from "../../components/ImageSlider";
 import { useLayoutEffect, useRef } from "react";
+import ImageSlider from "../../components/ImageSlider";
 
 // Type pour un projet
 type Project = {
@@ -58,7 +58,7 @@ export default function Projects() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".project-card").forEach((card: any, i) => {
+      gsap.utils.toArray<HTMLElement>(".project-card").forEach((card, i) => {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
