@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "../../components/ThemeProvider";
 import {
   mdiAnimation,
   mdiDocker,
@@ -19,6 +18,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useLayoutEffect } from "react";
+import { useTheme } from "../../components/ThemeProvider";
 
 export default function Stack() {
   const { theme } = useTheme();
@@ -51,7 +51,7 @@ export default function Stack() {
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".tech-card").forEach((card: any, i) => {
+      gsap.utils.toArray<HTMLElement>(".tech-card").forEach((card, i) => {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
