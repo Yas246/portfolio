@@ -21,13 +21,13 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="min-h-[calc(100vh-80px)] px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">
+    <div className="min-h-[calc(100vh-180px)] px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+      <div className="mx-auto max-w-3xl">
+        <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
           Me Contacter
         </h2>
 
-        <div ref={formRef} className="glass-panel p-8 max-w-md mx-auto">
+        <div ref={formRef} className="p-8 mx-auto max-w-md glass-panel">
           <div className="grid grid-cols-1 gap-8">
             <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300">
               <Mail className="w-6 h-6" />

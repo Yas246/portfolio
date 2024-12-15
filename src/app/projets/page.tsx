@@ -78,7 +78,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <div ref={projectsRef} className="px-4 pt-24 min-h-screen sm:px-6 lg:px-8">
+    <div
+      ref={projectsRef}
+      className="px-4 pt-24 pb-6 min-h-screen sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
           Mes Projets

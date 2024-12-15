@@ -1,11 +1,11 @@
 "use client";
 
-import { useLayoutEffect, useRef, useCallback } from "react";
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
+import { useCallback, useLayoutEffect, useRef } from "react";
+import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
-import Particles from "react-tsparticles";
 
 export default function Home() {
   const titleRef = useRef(null);
@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-[calc(100vh-80px)] px-4 sm:px-6 lg:px-8 flex flex-col justify-center relative">
+    <div className="min-h-[calc(100vh-80px)] sm:min-v-screen pt-20 px-4 sm:px-6 lg:px-8 flex flex-col justify-center relative">
       <Particles
         className="absolute inset-0"
         init={particlesInit}
@@ -132,7 +132,7 @@ export default function Home() {
             Voir mes projets
           </button>
           <a
-            href="/cv.pdf"
+            href="/YassarWABI_CV.pdf"
             download
             className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-700 hover:text-white dark:hover:text-white"
           >
