@@ -41,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-[calc(100vh-80px)] sm:min-v-screen pt-20 px-4 sm:px-6 lg:px-8 flex flex-col justify-center relative">
+    <div className="flex relative flex-col justify-center px-4 pt-20 sm:px-6 lg:px-8">
       <Particles
         className="absolute inset-0"
         init={particlesInit}

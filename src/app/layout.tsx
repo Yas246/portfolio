@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
 import ThemeProvider from "../components/ThemeProvider";
@@ -20,17 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} relative min-h-screen`}>
         <ThemeProvider>
           <Navbar />
-          <main className="min-h-screen">
+          <main>
             <PageTransition>{children}</PageTransition>
-            <footer className="pb-6 text-sm text-center text-gray-600 dark:text-gray-400">
-              <p>
-                © {new Date().getFullYear()} Yassar WABI. Tous droits réservés.
-              </p>
-            </footer>
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
