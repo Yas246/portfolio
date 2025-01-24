@@ -17,6 +17,24 @@ type Project = {
 // Liste des projets
 const projects: Project[] = [
   {
+    name: "Yatouze",
+    description:
+      "Yatouze simplifie et automatise les processus de gestion clé pour votre entreprise, libérant ainsi son potentiel. En favorisant la collaboration et en améliorant la productivité des employés, Yatouze permet une prise de décision éclairée grâce à des données précises.",
+    link: "https://yatouze.com/",
+    images: ["/images/Yatouze.png", "/images/Yatouze2.png"],
+  },
+  {
+    name: "Cinematch",
+    description:
+      "Cinematch est une plateforme de recommandations de films personnalisées, basée sur un modèle entraîné sur plus de 600 000 films. Grâce à un algorithme intelligent, elle analyse les goûts, les genres favoris et les évaluations des utilisateurs pour proposer des suggestions adaptées. Simple et intuitive, Cinematch facilite la découverte de nouveaux contenus correspondant parfaitement à vos préférences.",
+    link: "https://cinematch-hdra.vercel.app/",
+    images: [
+      "/images/cinematch.png",
+      "/images/cinematch2.png",
+      "/images/cinematch3.png",
+    ],
+  },
+  {
     name: "Akronim",
     description:
       "Le site web d'AKRONIM est une vitrine institutionnelle moderne développée avec Next.js, TypeScript et Tailwind CSS, mettant en avant l'excellence académique de l'université dans les domaines de l'informatique et de la gestion. L'interface utilise un design glassmorphism élégant avec des animations GSAP et des transitions Framer Motion pour une expérience utilisateur fluide. L'ensemble est enrichi d'images professionnelles et d'éléments interactifs qui guident les visiteurs vers les différentes formations proposées. Notez que AKRONIM reste factice",
@@ -48,6 +66,7 @@ const projects: Project[] = [
       "/images/ficheInfo3.png",
     ],
   },
+
   // Ajoutez vos autres projets ici
 ];
 

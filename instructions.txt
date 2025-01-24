@@ -1,0 +1,48 @@
+Comme tu eux le voir j'ai déja créé une application next js de base avec typescript et tailwindcss. Je veux créer un portfolio avec cette structure:
+1. Structure générale
+Le site doit contenir quatre pages principales :
+Accueil
+Stack
+Projets
+Contact
+2. Page d’accueil
+Contenu :
+Une introduction avec ton nom et ton rôle (par exemple : "Bonjour, je suis [Ton Nom], développeur web").
+Un court paragraphe décrivant ton expertise ou ce que tu offres.
+Une animation d'entrée sur les textes ou les éléments (utiliser GSAP).
+Design :
+Glassmorphism appliqué sur les blocs principaux.
+Palette : gris (mode sombre) ou bleu (mode clair).
+3. Page Stack
+Contenu :
+Les icônes de toutes les technologies que tu maîtrises : Next.js, TypeScript, Tailwind CSS, JavaScript, HTML, CSS, React, Node.js, Git, GitHub, Docker, VS Code, ESLint, GSAP.
+Chaque icône peut être animée (effet hover avec GSAP).
+Design :
+Affichage des icônes en grille avec un espace propre et des animations légères.
+Glassmorphism pour les sections contenant les icônes.
+4. Page Projets
+Contenu :
+Une grille ou liste de cartes. Chaque carte affiche :
+Nom du projet.
+Petite description du projet.
+Lien vers le projet (si en ligne).
+Un ou plusieurs screenshots, affichés sous forme de slider ou galerie.
+Design :
+Les cartes doivent utiliser le style Glassmorphism.
+Animation au scroll pour chaque carte (GSAP).
+5. Page Contact
+Contenu :
+Un formulaire avec les champs :
+Adresse e-mail.
+Contact WhatsApp (avec une icône cliquable).
+Numéro de téléphone direct.
+Design :
+Une section centrale propre avec un formulaire dans un conteneur en Glassmorphism.
+Animation à l’apparition du formulaire (GSAP).
+6. Fonctionnalités globales
+Dark/Light Mode :
+Implémenter un mode sombre (gris) et clair (bleu).
+Navigation entre les pages :
+Barre de navigation en haut de chaque page, avec une transition douce entre les sections/pages (GSAP).
+Animations GSAP :
+Utiliser des animations d’entrée et de défilement pour rendre le site plus dynamique.
