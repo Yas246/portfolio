@@ -3,8 +3,10 @@
 import gsap from "gsap";
 import { Mail, MessageSquare, Phone } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 export default function Contact() {
+  const { t } = useTranslation("common"); // Use the common namespace
   const formRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -24,7 +26,7 @@ export default function Contact() {
     <div className="min-h-[calc(100vh-180px)] px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
-          Me Contacter
+          {t("contact.title")} {/* Translate the title */}
         </h2>
 
         <div ref={formRef} className="p-8 mx-auto max-w-md glass-panel">
@@ -54,7 +56,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="hover:text-blue-500"
               >
-                WhatsApp
+                {t("contact.whatsapp")} {/* Translate WhatsApp text */}
               </a>
             </div>
           </div>

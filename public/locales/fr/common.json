@@ -1,0 +1,57 @@
+{
+  "home": "Accueil",
+  "stack1": "Stack",
+  "projects1": "Projets",
+  "contacts1": "Contacts",
+  "home1": {
+    "title": "Bonjour, je suis <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Développeur Web",
+    "description": "Passionné par le développement web et spécialisé dans la création d'applications modernes avec React, Next.js et TypeScript. Je transforme des idées en expériences numériques exceptionnelles.",
+    "myStack": "Ma Stack",
+    "seeProjects": "Voir mes projets",
+    "downloadCV": "Télécharger CV",
+    "contactMe": "Me Contacter"
+  },
+  "stack": {
+    "title": "Ma Stack Technique",
+    "technologies": {
+      "Next.js": "Next.js",
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "TypeScript": "TypeScript",
+      "React": "React",
+      "Tailwind CSS": "Tailwind CSS",
+      "JavaScript": "JavaScript",
+      "Node.js": "Node.js",
+      "Git": "Git",
+      "GitHub": "GitHub",
+      "Docker": "Docker",
+      "GSAP": "GSAP"
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "link": "Voir le projet →"
+  },
+  "yatouze": {
+    "description": "Yatouze simplifie et automatise les processus de gestion clé pour votre entreprise, libérant ainsi son potentiel. En favorisant la collaboration et en améliorant la productivité des employés, Yatouze permet une prise de décision éclairée grâce à des données précises."
+  },
+  "cinematch": {
+    "description": "Cinematch est une plateforme de recommandations de films personnalisées, basée sur un modèle entraîné sur plus de 600 000 films. Grâce à un algorithme intelligent, elle analyse les goûts, les genres favoris et les évaluations des utilisateurs pour proposer des suggestions adaptées. Simple et intuitive, Cinematch facilite la découverte de nouveaux contenus correspondant parfaitement à vos préférences."
+  },
+  "akronim": {
+    "description": "Le site web d'AKRONIM est une vitrine institutionnelle moderne développée avec Next.js, TypeScript et Tailwind CSS, mettant en avant l'excellence académique de l'université dans les domaines de l'informatique et de la gestion. L'interface utilise un design glassmorphism élégant avec des animations GSAP et des transitions Framer Motion pour une expérience utilisateur fluide. L'ensemble est enrichi d'images professionnelles et d'éléments interactifs qui guident les visiteurs vers les différentes formations proposées. Notez que AKRONIM reste factice."
+  },
+  "replica": {
+    "description": "REPLICA est un outil web qui permet de convertir et dupliquer les numéros de téléphone dans un fichier de contacts VCF. Les utilisateurs peuvent télécharger leur fichier VCF, et l'application crée automatiquement une copie secondaire de chaque numéro de téléphone avec un format modifié. L'utilisateur a ensuite deux options de téléchargement : soit un fichier contenant à la fois les numéros originaux et modifiés, soit uniquement les numéros modifiés. L'interface est simple, avec un design moderne en dégradé sombre et des animations de carrousel pour guider l'utilisateur."
+  },
+  "rpmanager": {
+    "description": "RPManager est un outil de gestion de rapports de travail journaliers sous forme de Progressive Web App (PWA). Elle permet aux utilisateurs de créer des rapports détaillés incluant leurs horaires de travail (arrivée/départ), leurs tâches effectuées avec les heures correspondantes, et les travaux prévus pour le jour suivant. L'application offre une interface moderne avec des animations GSAP, un stockage local via IndexedDB pour fonctionner hors ligne, et la possibilité de générer des PDF des rapports. Elle inclut également des fonctionnalités comme la recherche de rapports passés par date, la possibilité d'installation sur l'appareil (PWA), et une mise en page responsive avec un design élégant utilisant des effets de glassmorphism et un thème sombre."
+  },
+  "ficheinfo": {
+    "description": "FicheInfo est une application web développée avec Next.js, qui permet aux employés de gérer efficacement leurs missions et de suivre leur progression. Elle offre également la possibilité de créer des rapports journaliers détaillés incluant la date, les heures d'arrivée et de départ, les tâches effectuées dans un ordre chronologique, ainsi que les problèmes rencontrés par tâche. Les rapports peuvent être exportés au format PDF, facilitant ainsi leur partage et leur archivage."
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "whatsapp": "WhatsApp"
+  }
+}

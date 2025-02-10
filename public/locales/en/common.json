@@ -1,0 +1,57 @@
+{
+  "home": "Home",
+  "stack1": "Stack",
+  "projects1": "Projects",
+  "contacts1": "Contacts",
+  "home1": {
+    "title": "Hello, I'm <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Web Developer",
+    "description": "Passionate about web development and specialized in creating modern applications with React, Next.js and TypeScript. I transform ideas into exceptional digital experiences.",
+    "myStack": "My Stack",
+    "seeProjects": "See My Projects",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "stack": {
+    "title": "My Technical Stack",
+    "technologies": {
+      "Next.js": "Next.js",
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "TypeScript": "TypeScript",
+      "React": "React",
+      "Tailwind CSS": "Tailwind CSS",
+      "JavaScript": "JavaScript",
+      "Node.js": "Node.js",
+      "Git": "Git",
+      "GitHub": "GitHub",
+      "Docker": "Docker",
+      "GSAP": "GSAP"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "link": "See the project →"
+  },
+  "yatouze": {
+    "description": "Yatouze simplifies and automates key management processes for your business, unlocking its potential. By fostering collaboration and improving employee productivity, Yatouze enables informed decision-making through accurate data."
+  },
+  "cinematch": {
+    "description": "Cinematch is a personalized movie recommendation platform, based on a model trained on over 600,000 films. Thanks to an intelligent algorithm, it analyzes user tastes, favorite genres and ratings to offer tailored suggestions. Simple and intuitive, Cinematch makes it easy to discover new content that perfectly matches your preferences."
+  },
+  "akronim": {
+    "description": "AKRONIM website is a modern institutional showcase developed with Next.js, TypeScript and Tailwind CSS, highlighting the university's academic excellence in the fields of computer science and management. The interface uses an elegant glassmorphism design with GSAP animations and Framer Motion transitions for a smooth user experience. The whole is enriched with professional images and interactive elements that guide visitors to the various courses offered. Note that AKRONIM remains fictional."
+  },
+  "replica": {
+    "description": "REPLICA application is a web tool that allows you to convert and duplicate phone numbers in a VCF contact file. Users can upload their VCF file, and the application automatically creates a secondary copy of each phone number with a modified format. The user then has two download options: either a file containing both the original and modified numbers, or only the modified numbers. The interface is simple, with a modern design in dark gradient and carousel animations to guide the user."
+  },
+  "rpmanager": {
+    "description": "RPManager is a tool for managing daily work reports in the form of a Progressive Web App (PWA). It allows users to create detailed reports including their work schedules (arrival/departure), their tasks performed with the corresponding hours, and the work planned for the next day. The application offers a modern interface with GSAP animations, local storage via IndexedDB to work offline, and the ability to generate PDFs of reports. It also includes features such as searching for past reports by date, the possibility of installation on the device (PWA), and a responsive layout with an elegant design using glassmorphism effects and a dark theme."
+  },
+  "ficheinfo": {
+    "description": "FicheInfo is a web application developed with Next.js, which allows employees to efficiently manage their assignments and track their progress. It also offers the possibility to create detailed daily reports including the date, arrival and departure times, tasks performed in chronological order, as well as problems encountered per task. Reports can be exported in PDF format, facilitating their sharing and archiving."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "whatsapp": "WhatsApp"
+  }
+}

@@ -2,9 +2,9 @@
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { useLayoutEffect, useRef } from "react";
 import ImageSlider from "../../components/ImageSlider";
+import { useTranslation } from "react-i18next"; // Importation de useTranslation
 
 // Type pour un projet
 type Project = {
@@ -18,15 +18,13 @@ type Project = {
 const projects: Project[] = [
   {
     name: "Yatouze",
-    description:
-      "Yatouze simplifie et automatise les processus de gestion clé pour votre entreprise, libérant ainsi son potentiel. En favorisant la collaboration et en améliorant la productivité des employés, Yatouze permet une prise de décision éclairée grâce à des données précises.",
+    description: "yatouze.description", // Clé de traduction
     link: "https://yatouze.com/",
     images: ["/images/Yatouze.png", "/images/Yatouze2.png"],
   },
   {
     name: "Cinematch",
-    description:
-      "Cinematch est une plateforme de recommandations de films personnalisées, basée sur un modèle entraîné sur plus de 600 000 films. Grâce à un algorithme intelligent, elle analyse les goûts, les genres favoris et les évaluations des utilisateurs pour proposer des suggestions adaptées. Simple et intuitive, Cinematch facilite la découverte de nouveaux contenus correspondant parfaitement à vos préférences.",
+    description: "cinematch.description", // Clé de traduction
     link: "https://cinematch-hdra.vercel.app/",
     images: [
       "/images/cinematch.png",
@@ -36,29 +34,25 @@ const projects: Project[] = [
   },
   {
     name: "Akronim",
-    description:
-      "Le site web d'AKRONIM est une vitrine institutionnelle moderne développée avec Next.js, TypeScript et Tailwind CSS, mettant en avant l'excellence académique de l'université dans les domaines de l'informatique et de la gestion. L'interface utilise un design glassmorphism élégant avec des animations GSAP et des transitions Framer Motion pour une expérience utilisateur fluide. L'ensemble est enrichi d'images professionnelles et d'éléments interactifs qui guident les visiteurs vers les différentes formations proposées. Notez que AKRONIM reste factice",
+    description: "akronim.description", // Clé de traduction
     link: "https://akronim.vercel.app/",
     images: ["/images/akronim.png", "/images/akronim2.png"],
   },
   {
     name: "Replica",
-    description:
-      "L'application REPLICA est un outil web qui permet de convertir et dupliquer les numéros de téléphone dans un fichier de contacts VCF. Les utilisateurs peuvent télécharger leur fichier VCF, et l'application crée automatiquement une copie secondaire de chaque numéro de téléphone avec un format modifié. L'utilisateur a ensuite deux options de téléchargement : soit un fichier contenant à la fois les numéros originaux et modifiés, soit uniquement les numéros modifiés. L'interface est simple, avec un design moderne en dégradé sombre et des animations de carrousel pour guider l'utilisateur.",
+    description: "replica.description", // Clé de traduction
     link: "https://replica-tau.vercel.app/",
     images: ["/images/replica.png", "/images/replica2.png"],
   },
   {
     name: "RpManager",
-    description:
-      "L'application est un outil de gestion de rapports de travail journaliers sous forme de Progressive Web App (PWA). Elle permet aux utilisateurs de créer des rapports détaillés incluant leurs horaires de travail (arrivée/départ), leurs tâches effectuées avec les heures correspondantes, et les travaux prévus pour le jour suivant. L'application offre une interface moderne avec des animations GSAP, un stockage local via IndexedDB pour fonctionner hors ligne, et la possibilité de générer des PDF des rapports. Elle inclut également des fonctionnalités comme la recherche de rapports passés par date, la possibilité d'installation sur l'appareil (PWA), et une mise en page responsive avec un design élégant utilisant des effets de glassmorphism et un thème sombre.",
+    description: "rpmanager.description", // Clé de traduction
     link: "https://rpmanager.vercel.app/",
     images: ["/images/rpmanager.png"],
   },
   {
     name: "FicheInfo",
-    description:
-      "FicheInfo est une application web développée avec Next.js, qui permet aux employés de gérer efficacement leurs missions et de suivre leur progression. Elle offre également la possibilité de créer des rapports journaliers détaillés incluant la date, les heures d'arrivée et de départ, les tâches effectuées dans un ordre chronologique, ainsi que les problèmes rencontrés par tâche. Les rapports peuvent être exportés au format PDF, facilitant ainsi leur partage et leur archivage.",
+    description: "ficheinfo.description", // Clé de traduction
     link: "",
     images: [
       "/images/ficheInfo.png",
@@ -66,11 +60,10 @@ const projects: Project[] = [
       "/images/ficheInfo3.png",
     ],
   },
-
-  // Ajoutez vos autres projets ici
 ];
 
 export default function Projects() {
+  const { t } = useTranslation("common"); // Utilisation du namespace "common"
   const projectsRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -103,7 +96,7 @@ export default function Projects() {
     >
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
-          Mes Projets
+          {t("projects.title")} {/* Traduction du titre */}
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
@@ -121,7 +114,7 @@ export default function Projects() {
                 {project.name}
               </h3>
               <p className="mb-4 text-gray-600 dark:text-gray-300">
-                {project.description}
+                {t(project.description)} {/* Traduction de la description */}
               </p>
               {project.link && (
                 <a
@@ -130,7 +123,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="mt-auto text-blue-600 dark:text-blue-400 hover:underline"
                 >
-                  Voir le projet →
+                  {t("projects.link")} {/* Traduction du lien */}
                 </a>
               )}
             </div>

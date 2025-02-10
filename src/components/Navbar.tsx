@@ -1,22 +1,25 @@
 "use client";
 
+import { mdiGithub } from "@mdi/js";
+import Icon from "@mdi/react";
+import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "./ThemeProvider";
-import { Sun, Moon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Drawer from "./Drawer";
-import Icon from "@mdi/react";
-import { mdiGithub } from "@mdi/js";
+import { useTheme } from "./ThemeProvider";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation("common"); // Charger les traductions depuis common.json
 
   const navItems = [
-    { name: "Accueil", path: "/" },
-    { name: "Stack", path: "/stack" },
-    { name: "Projets", path: "/projets" },
-    { name: "Contacts", path: "/contact" },
+    { name: t("home"), path: "/" },
+    { name: t("stack1"), path: "/stack" },
+    { name: t("projects1"), path: "/projets" },
+    { name: t("contacts1"), path: "/contact" },
   ];
 
   return (
@@ -58,6 +61,7 @@ export default function Navbar() {
                 <Sun className="text-gray-200" />
               )}
             </button>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

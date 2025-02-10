@@ -19,9 +19,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useLayoutEffect } from "react";
 import { useTheme } from "../../components/ThemeProvider";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 export default function Stack() {
   const { theme } = useTheme();
+  const { t } = useTranslation("common"); // Use the common namespace
 
   const technologies = [
     {
@@ -37,7 +39,6 @@ export default function Stack() {
     { name: "JavaScript", icon: mdiLanguageJavascript },
     { name: "Node.js", icon: mdiNodejs },
     { name: "Git", icon: mdiGit },
-
     { name: "GitHub", icon: mdiGithub },
     { name: "Docker", icon: mdiDocker },
     { name: "GSAP", icon: mdiAnimation },
@@ -78,7 +79,7 @@ export default function Stack() {
     <div className="px-4 pt-24 pb-6 min-h-screen sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
-          Ma Stack Technique
+          {t("stack.title")} {/* Translate the title */}
         </h2>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
           {technologies.map((tech) => (
@@ -100,7 +101,8 @@ export default function Stack() {
                 )}
               </div>
               <p className="font-medium text-center text-gray-800 dark:text-white">
-                {tech.name}
+                {t(`stack.technologies.${tech.name}`)}{" "}
+                {/* Translate technology names */}
               </p>
             </div>
           ))}
