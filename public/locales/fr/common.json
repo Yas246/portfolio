@@ -4,8 +4,8 @@
   "projects1": "Projets",
   "contacts1": "Contacts",
   "home1": {
-    "title": "Bonjour, je suis <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Développeur Web",
-    "description": "Passionné par le développement web et spécialisé dans la création d'applications modernes avec React, Next.js et TypeScript. Je transforme des idées en expériences numériques exceptionnelles.",
+    "title": "Bonjour, je suis <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Ingénieur Logiciel",
+    "description": "Passionné par le développement web et spécialisé dans la création d’applications modernes avec React, Next.js et TypeScript, j’intègre également l’intelligence artificielle (TensorFlow, Keras, OpenCV) pour enrichir les expériences numériques et transformer des idées en solutions innovantes.",
     "myStack": "Ma Stack",
     "seeProjects": "Voir mes projets",
     "downloadCV": "Télécharger CV",
@@ -25,7 +25,12 @@
       "Git": "Git",
       "GitHub": "GitHub",
       "Docker": "Docker",
-      "GSAP": "GSAP"
+      "GSAP": "GSAP",
+      "Python": "Python",
+      "TensorFlow": "TensorFlow",
+      "Keras": "Keras",
+      "OpenCV": "OpenCV",
+      "Flask": "Flask"
     }
   },
   "projects": {
@@ -49,6 +54,24 @@
   },
   "ficheinfo": {
     "description": "FicheInfo est une application web développée avec Next.js, qui permet aux employés de gérer efficacement leurs missions et de suivre leur progression. Elle offre également la possibilité de créer des rapports journaliers détaillés incluant la date, les heures d'arrivée et de départ, les tâches effectuées dans un ordre chronologique, ainsi que les problèmes rencontrés par tâche. Les rapports peuvent être exportés au format PDF, facilitant ainsi leur partage et leur archivage."
+  },
+  "permix": {
+    "description": "Permix est une application web PWA pour réviser le code de la route béninois, proposant un mode révision (questions en ordre avec réponses immédiates) et un mode examen (50 questions aléatoires, timer, score final), avec sommaire interactif, animations GSAP, stockage local des progrès, fonctionnement offline et déploiement sur Vercel."
+  },
+  "explorebenin": {
+    "description": "ExploreBenin est une application web interactive qui présente les sites touristiques, culturels et naturels du Bénin, avec des cartes, des cartes descriptives, des galeries d'images et un moteur de recherche."
+  },
+  "kimizone": {
+    "description": "Kimizone est une ébauche de marque de streetwear tunisienne, axée sur des créations urbaines originales mêlant identité locale, graphismes modernes et influences globales, avec une attention particulière portée aux designs, aux matériaux et à l’expression culturelle."
+  },
+  "omshina": {
+    "description": "OMSHINA International Recruitment est une plateforme multiservice de recrutement international qui accompagne étudiants, travailleurs, artistes et autres profils dans leurs démarches de mobilité et d’intégration à l’étranger."
+  },
+  "pneumo": {
+    "description": "Pneumo est une application web moderne, conçue pour le suivi médical des maladies respiratoires et la gestion des données de santé, de la prise de rendez-vous et des résultats des analyses."
+  },
+  "vix": {
+    "description": "Vix est une application Python qui génère des requêtes SQL intelligentes à partir de commandes en langage naturel (Ex:'Quel est le chiffre d'affaires des 3 derniers mois ?'). Elle utilise LangChain et Google Generative AI (Gemini), et prend en charge plusieurs systèmes de gestion de base de données (SGBD)"
   },
   "contact": {
     "title": "Me Contacter",

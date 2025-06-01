@@ -4,8 +4,8 @@
   "projects1": "Projects",
   "contacts1": "Contacts",
   "home1": {
-    "title": "Hello, I'm <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Web Developer",
-    "description": "Passionate about web development and specialized in creating modern applications with React, Next.js and TypeScript. I transform ideas into exceptional digital experiences.",
+    "title": "Hello, I'm <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Software Engineer",
+    "description": "Passionate about web development and specialized in creating modern applications with React, Next.js and TypeScript, I also integrate artificial intelligence (TensorFlow, Keras, OpenCV) to enrich digital experiences and transform ideas into innovative solutions.",
     "myStack": "My Stack",
     "seeProjects": "See My Projects",
     "downloadCV": "Download CV",
@@ -25,7 +25,12 @@
       "Git": "Git",
       "GitHub": "GitHub",
       "Docker": "Docker",
-      "GSAP": "GSAP"
+      "GSAP": "GSAP",
+      "Python": "Python",
+      "TensorFlow": "TensorFlow",
+      "Keras": "Keras",
+      "OpenCV": "OpenCV",
+      "Flask": "Flask"
     }
   },
   "projects": {
@@ -49,6 +54,24 @@
   },
   "ficheinfo": {
     "description": "FicheInfo is a web application developed with Next.js, which allows employees to efficiently manage their assignments and track their progress. It also offers the possibility to create detailed daily reports including the date, arrival and departure times, tasks performed in chronological order, as well as problems encountered per task. Reports can be exported in PDF format, facilitating their sharing and archiving."
+  },
+  "permix": {
+    "description": "Permix is a web application PWA for revising the Beninese code of the route, offering a revision mode (questions in order with immediate answers) and an exam mode (50 random questions, timer, final score), with interactive summary, GSAP animations, local storage of progress, offline operation and deployment on Vercel."
+  },
+  "explorebenin": {
+    "description": "ExploreBenin is an interactive web application that presents the tourist sites, cultural and natural sites of Benin, with maps, descriptive cards, image galleries, and a search engine."
+  },
+  "kimizone": {
+    "description": "Kimizone is a Tunisian streetwear brand concept, focused on original urban creations blending local identity, modern graphics, and global influences, with a particular attention to designs, materials, and cultural expression."
+  },
+  "omshina": {
+    "description": "OMSHINA International Recruitment is a multi-service international recruitment platform that accompanies students, workers, artists, and other profiles in their mobility and integration abroad."
+  },
+  "pneumo": {
+    "description": "Pneumo is a modern web application designed for the medical tracking of respiratory diseases and the management of health data, appointments, and analysis results."
+  },
+  "vix": {
+    "description": "Vix is a Python application that generates intelligent SQL queries from natural language commands (Ex:'What is the sales figure for the last 3 months?'). It uses LangChain and Google Generative AI (Gemini), and supports multiple database management systems (DBMS)."
   },
   "contact": {
     "title": "Contact Me",

@@ -2,12 +2,16 @@
 
 import {
   mdiAnimation,
+  mdiBrain,
+  mdiCamera,
   mdiDocker,
+  mdiFlask,
   mdiGit,
   mdiGithub,
   mdiLanguageCss3,
   mdiLanguageHtml5,
   mdiLanguageJavascript,
+  mdiLanguagePython,
   mdiLanguageTypescript,
   mdiNodejs,
   mdiReact,
@@ -18,8 +22,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useLayoutEffect } from "react";
-import { useTheme } from "../../components/ThemeProvider";
 import { useTranslation } from "react-i18next"; // Import useTranslation
+import { useTheme } from "../../components/ThemeProvider";
 
 export default function Stack() {
   const { theme } = useTheme();
@@ -42,6 +46,11 @@ export default function Stack() {
     { name: "GitHub", icon: mdiGithub },
     { name: "Docker", icon: mdiDocker },
     { name: "GSAP", icon: mdiAnimation },
+    { name: "Python", icon: mdiLanguagePython },
+    { name: "TensorFlow", icon: mdiBrain },
+    { name: "Keras", icon: mdiBrain },
+    { name: "OpenCV", icon: mdiCamera },
+    { name: "Flask", icon: mdiFlask },
   ];
 
   useLayoutEffect(() => {
@@ -76,7 +85,7 @@ export default function Stack() {
   }, []);
 
   return (
-    <div className="px-4 pt-24 pb-6 min-h-screen sm:px-6 lg:px-8">
+    <div className="min-h-screen px-4 pt-24 pb-6 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
           {t("stack.title")} {/* Translate the title */}
@@ -85,9 +94,9 @@ export default function Stack() {
           {technologies.map((tech) => (
             <div
               key={tech.name}
-              className="flex flex-col justify-center items-center p-6 transition-transform tech-card glass-panel hover:scale-105 group"
+              className="flex flex-col items-center justify-center p-6 transition-transform tech-card glass-panel hover:scale-105 group"
             >
-              <div className="relative mb-4 w-16 h-16 text-gray-700 transition-colors dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+              <div className="relative w-16 h-16 mb-4 text-gray-700 transition-colors dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                 {tech.isNextIcon ? (
                   <Image
                     src={tech.icon}

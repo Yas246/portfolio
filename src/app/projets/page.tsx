@@ -17,6 +17,62 @@ type Project = {
 // Liste des projets
 const projects: Project[] = [
   {
+    name: "Vix",
+    description: "vix.description", // Clé de traduction
+    link: "https://github.com/Yas246/vix",
+    images: ["/images/vix.png", "/images/vix2.png", "/images/vix3.png"],
+  },
+  {
+    name: "Pneumo",
+    description: "pneumo.description", // Clé de traduction
+    link: "https://pneumo.vercel.app/",
+    images: [
+      "/images/pneumo.png",
+      "/images/pneumo2.png",
+      "/images/pneumo3.png",
+    ],
+  },
+  {
+    name: "OMSHINA International Recruitment",
+    description: "omshina.description", // Clé de traduction
+    link: "https://recruitement.vercel.app/",
+    images: [
+      "/images/omshina.png",
+      "/images/omshina2.png",
+      "/images/omshina3.png",
+    ],
+  },
+  {
+    name: "Kimizone",
+    description: "kimizone.description",
+    link: "https://kimizone.vercel.app/",
+    images: [
+      "/images/kimizone.png",
+      "/images/kimizone2.png",
+      "/images/kimizone3.png",
+    ],
+  },
+  {
+    name: "ExploreBénin",
+    description: "explorebenin.description", // Clé de traduction
+    link: "https://explorebenin.vercel.app/",
+    images: [
+      "/images/explorebenin.png",
+      "/images/explorebenin2.png",
+      "/images/explorebenin1.png",
+    ],
+  },
+  {
+    name: "Permix",
+    description: "permix.description",
+    link: "https://permix-rho.vercel.app/",
+    images: [
+      "/images/permix.png",
+      "/images/permix2.png",
+      "/images/permix3.png",
+    ],
+  },
+  {
     name: "Yatouze",
     description: "yatouze.description", // Clé de traduction
     link: "https://yatouze.com/",
@@ -92,7 +148,7 @@ export default function Projects() {
   return (
     <div
       ref={projectsRef}
-      className="px-4 pt-24 pb-20 min-h-screen sm:px-6 lg:px-8"
+      className="min-h-screen px-4 pt-24 pb-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
@@ -104,7 +160,7 @@ export default function Projects() {
               key={index}
               className="flex flex-col p-6 project-card glass-panel"
             >
-              <div className="overflow-hidden relative mb-4 h-64 rounded-lg">
+              <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
                 <ImageSlider
                   images={project.images}
                   projectName={project.name}
