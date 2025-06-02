@@ -3,8 +3,9 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-import ImageSlider from "../../components/ImageSlider";
 import { useTranslation } from "react-i18next"; // Importation de useTranslation
+import ImageSlider from "../../components/ImageSlider";
+import PageTitle from "../../components/PageTitle";
 
 // Type pour un projet
 type Project = {
@@ -146,46 +147,49 @@ export default function Projects() {
   }, []);
 
   return (
-    <div
-      ref={projectsRef}
-      className="min-h-screen px-4 pt-24 pb-20 sm:px-6 lg:px-8"
-    >
-      <div className="mx-auto max-w-7xl">
-        <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
-          {t("projects.title")} {/* Traduction du titre */}
-        </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="flex flex-col p-6 project-card glass-panel"
-            >
-              <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
-                <ImageSlider
-                  images={project.images}
-                  projectName={project.name}
-                />
+    <>
+      <PageTitle title="Projets" />
+      <div
+        ref={projectsRef}
+        className="min-h-screen px-4 pt-24 pb-20 sm:px-6 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
+            {t("projects.title")} {/* Traduction du titre */}
+          </h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="flex flex-col p-6 project-card glass-panel"
+              >
+                <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
+                  <ImageSlider
+                    images={project.images}
+                    projectName={project.name}
+                  />
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-gray-800 dark:text-white">
+                  {project.name}
+                </h3>
+                <p className="mb-4 text-gray-600 dark:text-gray-300">
+                  {t(project.description)} {/* Traduction de la description */}
+                </p>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    {t("projects.link")} {/* Traduction du lien */}
+                  </a>
+                )}
               </div>
-              <h3 className="mb-2 text-xl font-bold text-gray-800 dark:text-white">
-                {project.name}
-              </h3>
-              <p className="mb-4 text-gray-600 dark:text-gray-300">
-                {t(project.description)} {/* Traduction de la description */}
-              </p>
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                  {t("projects.link")} {/* Traduction du lien */}
-                </a>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

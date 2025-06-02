@@ -23,11 +23,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useLayoutEffect } from "react";
 import { useTranslation } from "react-i18next"; // Import useTranslation
+import PageTitle from "../../components/PageTitle";
 import { useTheme } from "../../components/ThemeProvider";
 
 export default function Stack() {
   const { theme } = useTheme();
   const { t } = useTranslation("common"); // Use the common namespace
+
+  useLayoutEffect(() => {
+    document.title = "Portfolio | Stack";
+  }, []);
 
   const technologies = [
     {
@@ -85,7 +90,8 @@ export default function Stack() {
   }, []);
 
   return (
-    <div className="min-h-screen px-4 pt-24 pb-6 sm:px-6 lg:px-8">
+    <div className="px-4 pt-24 pb-6 min-h-screen sm:px-6 lg:px-8">
+      <PageTitle title="Stack" />
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
           {t("stack.title")} {/* Translate the title */}
