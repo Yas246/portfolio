@@ -35,7 +35,15 @@
   },
   "projects": {
     "title": "My Projects",
-    "link": "See the project →"
+    "link": "See the project →",
+    "seeDetails": "See details",
+    "backToProjects": "← Back to projects",
+    "viewOnGitHub": "View on GitHub",
+    "visitDemo": "Visit demo",
+    "technologies": "Technologies used",
+    "features": "Features",
+    "description": "Description",
+    "noDescription": "No description available"
   },
   "yatouze": {
     "description": "Yatouze simplifies and automates key management processes for your business, unlocking its potential. By fostering collaboration and improving employee productivity, Yatouze enables informed decision-making through accurate data."

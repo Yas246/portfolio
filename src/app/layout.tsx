@@ -38,9 +38,10 @@ export default function RootLayout({
         </head>
         <body className={`${electrolize.className} bg-white dark:bg-gray-900`}>
           <div className="flex items-center justify-center min-h-screen">
-            <div className="w-64 text-center">
-              <div className="h-2 mb-4 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div className="h-2 bg-blue-600 rounded-full animate-[loading_2s_ease-in-out_infinite]"></div>
+            <div className="text-center">
+              <div className="relative w-16 h-16 mx-auto mb-4">
+                <div className="absolute inset-0 w-16 h-16 border-4 border-gray-200 rounded-full dark:border-gray-700"></div>
+                <div className="absolute inset-0 w-16 h-16 border-4 border-t-transparent border-blue-600 rounded-full animate-spin"></div>
               </div>
               <p className="text-lg text-gray-600 dark:text-gray-300">
                 Loading...

@@ -66,20 +66,27 @@ export default function Stack() {
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>(".tech-card").forEach((card, i) => {
-        gsap.from(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-            toggleActions: "play none none reverse",
-          },
+      // Animation plus fluide avec stagger
+      gsap.fromTo(
+        ".tech-card",
+        {
           y: 50,
           opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          delay: i * 0.1, // Ajoute un délai progressif pour chaque carte
-        });
-      });
+          scale: 0.95,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          stagger: 0.05,
+          scrollTrigger: {
+            start: "top bottom-=50",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     // Nettoyage
@@ -90,34 +97,35 @@ export default function Stack() {
   }, []);
 
   return (
-    <div className="px-4 pt-24 pb-6 min-h-screen sm:px-6 lg:px-8">
+    <div className="px-4 pt-24 pb-20 min-h-screen sm:px-6 lg:px-8">
       <PageTitle title="Stack" />
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
-          {t("stack.title")} {/* Translate the title */}
+          {t("stack.title")}
         </h2>
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 items-start">
           {technologies.map((tech) => (
             <div
               key={tech.name}
-              className="flex flex-col items-center justify-center p-6 transition-transform tech-card glass-panel hover:scale-105 group"
+              className="flex flex-col items-center p-6 transition-transform tech-card glass-panel hover:scale-105 group"
             >
-              <div className="relative w-16 h-16 mb-4 text-gray-700 transition-colors dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+              <div className="flex items-center justify-center w-16 h-16 mb-4 text-gray-700 transition-colors dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                 {tech.isNextIcon ? (
-                  <Image
-                    src={tech.icon}
-                    alt={tech.name}
-                    width={40}
-                    height={40}
-                    className="w-full h-full transition-all group-hover:brightness-0 group-hover:invert-[.35] group-hover:blue-50 group-hover:saturate-[5000%] group-hover:hue-rotate-[190deg]"
-                  />
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <Image
+                      src={tech.icon}
+                      alt={tech.name}
+                      width={40}
+                      height={40}
+                      className="w-full h-full object-contain transition-all group-hover:brightness-0 group-hover:invert-[.35] group-hover:blue-50 group-hover:saturate-[5000%] group-hover:hue-rotate-[190deg]"
+                    />
+                  </div>
                 ) : (
                   <Icon path={tech.icon} size={2.5} className="w-full h-full" />
                 )}
               </div>
               <p className="font-medium text-center text-gray-800 dark:text-white">
-                {t(`stack.technologies.${tech.name}`)}{" "}
-                {/* Translate technology names */}
+                {t(`stack.technologies.${tech.name}`)}
               </p>
             </div>
           ))}
