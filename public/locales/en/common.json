@@ -28,9 +28,15 @@
       "GSAP": "GSAP",
       "Python": "Python",
       "TensorFlow": "TensorFlow",
+      "PyTorch": "PyTorch",
       "Keras": "Keras",
       "OpenCV": "OpenCV",
-      "Flask": "Flask"
+      "Flask": "Flask",
+      "FastAPI": "FastAPI",
+      "Firebase": "Firebase",
+      "LangChain": "LangChain",
+      "Pandas": "Pandas",
+      "FAISS": "FAISS"
     }
   },
   "projects": {

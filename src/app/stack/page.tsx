@@ -2,9 +2,13 @@
 
 import {
   mdiAnimation,
+  mdiApi,
   mdiBrain,
   mdiCamera,
+  mdiCodeBraces,
+  mdiDatabase,
   mdiDocker,
+  mdiFire,
   mdiFlask,
   mdiGit,
   mdiGithub,
@@ -53,9 +57,15 @@ export default function Stack() {
     { name: "GSAP", icon: mdiAnimation },
     { name: "Python", icon: mdiLanguagePython },
     { name: "TensorFlow", icon: mdiBrain },
+    { name: "PyTorch", icon: mdiBrain },
     { name: "Keras", icon: mdiBrain },
     { name: "OpenCV", icon: mdiCamera },
     { name: "Flask", icon: mdiFlask },
+    { name: "FastAPI", icon: mdiApi },
+    { name: "Firebase", icon: mdiFire },
+    { name: "LangChain", icon: mdiCodeBraces },
+    { name: "Pandas", icon: mdiDatabase },
+    { name: "FAISS", icon: mdiDatabase },
   ];
 
   useLayoutEffect(() => {
