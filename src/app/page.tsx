@@ -77,7 +77,7 @@ export default function Home() {
   return (
     <>
       <PageTitle />
-      <div className="flex relative flex-col justify-center px-4 pt-20 sm:px-6 lg:px-8">
+      <div className="flex relative flex-col justify-center min-h-[calc(100vh-64px)] px-4 pt-20 pb-16 sm:px-6 lg:px-8">
         <Particles
           className="absolute inset-0"
           init={particlesInit}
@@ -131,45 +131,45 @@ export default function Home() {
             },
           }}
         />
-        <div className="relative mx-auto max-w-4xl">
-          <div className="p-8 mb-8 glass-panel sm:p-12">
+        <div className="relative mx-auto max-w-4xl w-full">
+          <div className="p-6 mb-6 glass-panel sm:p-12">
             <h1
               ref={titleRef}
-              className="mb-6 text-4xl font-bold text-gray-800 sm:text-5xl dark:text-white"
+              className="mb-4 text-3xl font-bold text-gray-800 sm:text-4xl sm:mb-6 dark:text-white"
             >
               <div dangerouslySetInnerHTML={{ __html: t("home1.title") }} />
             </h1>
             <p
               ref={descRef}
-              className="text-lg text-gray-600 sm:text-xl dark:text-gray-300"
+              className="text-base text-gray-600 sm:text-xl dark:text-gray-300"
             >
               {t("home1.description")}
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center pb-4 sm:gap-4">
             <button
               onClick={() => router.push("/stack")}
-              className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
+              className="px-4 py-2.5 text-sm sm:px-6 sm:py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
             >
               {t("home1.myStack")}
             </button>
             <button
               onClick={() => router.push("/projets")}
-              className="px-6 py-3 text-white bg-blue-600 rounded-lg transition-colors hover:bg-blue-700"
+              className="px-4 py-2.5 text-sm sm:px-6 sm:py-3 text-white bg-blue-600 rounded-lg transition-colors hover:bg-blue-700"
             >
               {t("home1.seeProjects")}
             </button>
             <a
               href={cvPath}
               download
-              className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-700 hover:text-white dark:hover:text-white"
+              className="px-4 py-2.5 text-sm sm:px-6 sm:py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-700 hover:text-white dark:hover:text-white"
             >
               {t("home1.downloadCV")}
             </a>
             <button
               onClick={() => router.push("/contact")}
-              className="px-6 py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
+              className="px-4 py-2.5 text-sm sm:px-6 sm:py-3 text-blue-600 rounded-lg border-2 border-blue-600 transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
             >
               {t("home1.contactMe")}
             </button>
