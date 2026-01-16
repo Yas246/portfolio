@@ -1,7 +1,7 @@
 "use client";
 
 import gsap from "gsap";
-import { Mail, MessageSquare, Phone } from "lucide-react";
+import { Mail, MessageSquare, Phone, Linkedin } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next"; // Import useTranslation
 import PageTitle from "../../components/PageTitle";
@@ -60,6 +60,18 @@ export default function Contact() {
                   className="hover:text-blue-500"
                 >
                   {t("contact.whatsapp")} {/* Translate WhatsApp text */}
+                </a>
+              </div>
+
+              <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300">
+                <Linkedin className="w-6 h-6" />
+                <a
+                  href="https://www.linkedin.com/in/yassar-wabi-704061379"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-500"
+                >
+                  LinkedIn
                 </a>
               </div>
             </div>

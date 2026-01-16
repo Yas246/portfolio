@@ -6,7 +6,7 @@
   "contacts1": "Contacts",
   "home1": {
     "title": "Bonjour, je suis <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Ingénieur Logiciel",
-    "description": "Passionné par le développement web et spécialisé dans la création d’applications modernes avec React, Next.js et TypeScript, j’intègre également l’intelligence artificielle (TensorFlow, Keras, OpenCV) pour enrichir les expériences numériques et transformer des idées en solutions innovantes.",
+    "description": "Ingénieur Logiciel spécialisé en Intelligence Artificielle et développement Web modernes. J'allie l'expertise Python (TensorFlow, FastAPI, OpenCV) et la puissance du Web (Next.js, TypeScript) pour créer des solutions intelligentes et évolutives : systèmes RAG hybrides, assistants vocaux, analyseurs de données IA et CRM intelligents. Chaque projet démontre ma capacité à transformer des défis techniques complexes en produits performants qui combinent algorithmes avancés et interfaces utilisateur modernes.",
     "myStack": "Ma Stack",
     "seeProjects": "Voir mes projets",
     "downloadCV": "Télécharger CV",

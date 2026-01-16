@@ -6,7 +6,7 @@
   "contacts1": "Contacts",
   "home1": {
     "title": "Hello, I'm <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Software Engineer",
-    "description": "Passionate about web development and specialized in creating modern applications with React, Next.js and TypeScript, I also integrate artificial intelligence (TensorFlow, Keras, OpenCV) to enrich digital experiences and transform ideas into innovative solutions.",
+    "description": "Software Engineer specialized in Artificial Intelligence and modern Web development. I combine Python expertise (TensorFlow, FastAPI, OpenCV) with Web power (Next.js, TypeScript) to create intelligent, scalable solutions: hybrid RAG systems, voice assistants, AI-powered analyzers and smart CRMs. Each project demonstrates my ability to transform complex technical challenges into high-performance products that blend advanced algorithms with modern user interfaces.",
     "myStack": "My Stack",
     "seeProjects": "See My Projects",
     "downloadCV": "Download CV",
