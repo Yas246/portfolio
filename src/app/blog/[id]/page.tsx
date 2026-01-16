@@ -2,7 +2,7 @@
 
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../../components/PageTitle";
@@ -12,7 +12,6 @@ import Link from "next/link";
 
 export default function BlogPost() {
   const { t, i18n } = useTranslation("common");
-  const router = useRouter();
   const params = useParams();
   const postRef = useRef<HTMLDivElement>(null);
 
@@ -20,7 +19,7 @@ export default function BlogPost() {
 
   const formatMarkdown = (text: string) => {
     // Convert **text** to <strong>text</strong>
-    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
   };
 
   useLayoutEffect(() => {
@@ -51,9 +50,9 @@ export default function BlogPost() {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+          <h1 className="mb-4 text-2xl font-bold text-gray-800 dark:text-white">
             Article not found
           </h1>
           <Link
@@ -86,16 +85,16 @@ export default function BlogPost() {
         ref={postRef}
         className="min-h-screen px-4 pt-24 pb-20 sm:px-6 lg:px-8"
       >
-        <div className="mx-auto max-w-4xl">
+        <div className="max-w-4xl mx-auto">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 mb-8 text-blue-600 dark:text-blue-400 hover:underline transition-colors"
+            className="inline-flex items-center gap-2 mb-8 text-blue-600 transition-colors dark:text-blue-400 hover:underline"
           >
             <ArrowLeft size={20} />
             {t("blog.backToBlog")}
           </Link>
 
-          <div className="blog-content glass-panel p-8 mb-8">
+          <div className="p-8 mb-8 blog-content glass-panel">
             <h1 className="mb-4 text-4xl font-bold text-gray-800 dark:text-white">
               {post.title[i18n.language as "fr" | "en"]}
             </h1>
@@ -105,7 +104,7 @@ export default function BlogPost() {
             </p>
 
             {post.featuredImage && (
-              <div className="relative w-full h-64 md:h-96 mb-6 overflow-hidden rounded-lg">
+              <div className="relative w-full h-64 mb-6 overflow-hidden rounded-lg md:h-96">
                 <Image
                   src={post.featuredImage}
                   alt={post.title[i18n.language as "fr" | "en"]}
@@ -117,7 +116,7 @@ export default function BlogPost() {
               </div>
             )}
 
-            <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-500 dark:text-gray-400 pb-6 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex flex-wrap items-center gap-4 pb-6 mb-6 text-sm text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
                 <span>
@@ -145,35 +144,35 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <div className="blog-content glass-panel p-8">
+          <div className="p-8 blog-content glass-panel">
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8">
+              <p className="mb-8 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
                 {content.introduction}
               </p>
 
               {content.sections.map((section, index) => (
-                <div key={index} className="blog-section mb-10">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+                <div key={index} className="mb-10 blog-section">
+                  <h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-white">
                     {section.heading}
                   </h2>
 
                   {section.content.map((paragraph, pIndex) => (
                     <p
                       key={pIndex}
-                      className="text-base leading-relaxed text-gray-700 dark:text-gray-300 mb-4"
+                      className="mb-4 text-base leading-relaxed text-gray-700 dark:text-gray-300"
                     >
                       {paragraph}
                     </p>
                   ))}
 
                   {section.listItems && section.listItems.length > 0 && (
-                    <ul className="space-y-3 my-6">
+                    <ul className="my-6 space-y-3">
                       {section.listItems.map((item, liIndex) => (
                         <li
                           key={liIndex}
                           className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
                         >
-                          <span className="text-blue-600 dark:text-blue-400 mt-1">
+                          <span className="mt-1 text-blue-600 dark:text-blue-400">
                             ✓
                           </span>
                           <span
@@ -189,8 +188,8 @@ export default function BlogPost() {
                 </div>
               ))}
 
-              <div className="blog-section mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700">
-                <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300 whitespace-pre-line">
+              <div className="pt-8 mt-12 border-t-2 border-gray-200 blog-section dark:border-gray-700">
+                <p className="text-xl leading-relaxed text-gray-700 whitespace-pre-line dark:text-gray-300">
                   {content.conclusion}
                 </p>
               </div>
@@ -200,7 +199,7 @@ export default function BlogPost() {
           <div className="mt-8 text-center">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 text-lg font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               <ArrowLeft size={20} />
               {t("blog.backToBlog")}

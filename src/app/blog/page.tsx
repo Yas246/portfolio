@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle";
 import { blogPosts } from "../../data/blog";
-import { Calendar, Clock, Tag } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 
 export default function Blog() {
   const { t, i18n } = useTranslation("common");
@@ -66,7 +66,7 @@ export default function Blog() {
             {blogPosts.map((post) => (
               <div
                 key={post.id}
-                className="flex flex-col p-6 blog-card glass-panel cursor-pointer hover:shadow-xl transition-shadow"
+                className="flex flex-col p-6 transition-shadow cursor-pointer blog-card glass-panel hover:shadow-xl"
                 onClick={() => router.push(`/blog/${post.id}`)}
               >
                 {post.featuredImage && (
@@ -89,7 +89,7 @@ export default function Blog() {
                   {post.subtitle[i18n.language as "fr" | "en"]}
                 </p>
 
-                <p className="mb-4 flex-grow text-gray-600 dark:text-gray-300 line-clamp-3">
+                <p className="flex-grow mb-4 text-gray-600 dark:text-gray-300 line-clamp-3">
                   {post.description[i18n.language as "fr" | "en"]}
                 </p>
 
@@ -110,7 +110,7 @@ export default function Blog() {
                   {post.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full"
+                      className="px-3 py-1 text-xs font-medium text-blue-600 bg-blue-100 rounded-full dark:bg-blue-900/30 dark:text-blue-400"
                     >
                       {tag}
                     </span>
@@ -122,7 +122,7 @@ export default function Blog() {
                     e.stopPropagation();
                     router.push(`/blog/${post.id}`);
                   }}
-                  className="w-full px-4 py-2 text-blue-600 border-2 border-blue-600 rounded-lg transition-colors dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
+                  className="w-full px-4 py-2 text-blue-600 transition-colors border-2 border-blue-600 rounded-lg dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:text-white"
                 >
                   {t("blog.readMore")}
                 </button>
