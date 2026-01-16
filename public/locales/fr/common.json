@@ -2,6 +2,7 @@
   "home": "Accueil",
   "stack1": "Stack",
   "projects1": "Projets",
+  "blog1": "Blog",
   "contacts1": "Contacts",
   "home1": {
     "title": "Bonjour, je suis <span class='text-blue-600 dark:text-blue-400'>Yassar WABI</span> Ingénieur Logiciel",
@@ -90,5 +91,13 @@
   "contact": {
     "title": "Me Contacter",
     "whatsapp": "WhatsApp"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Lire la suite",
+    "readTime": "min de lecture",
+    "backToBlog": "Retour au blog",
+    "publishedOn": "Publié le",
+    "tags": "Tags"
   }
 }

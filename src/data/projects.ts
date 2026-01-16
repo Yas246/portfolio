@@ -35,7 +35,7 @@ export const projects: Project[] = [
     language: "Python",
     topics: ["RAG", "AI", "Legal", "FastAPI", "FAISS", "Gemini"],
     stars: 0,
-    images: [],
+    images: ["/images/xpert.png"],
     features: [
       "Recherche lexicale BM25",
       "Recherche vectorielle FAISS",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     language: "Python",
     topics: ["Data Analysis", "Streamlit", "Pandas", "Visualization"],
     stars: 0,
-    images: [],
+    images: ["/images/argus.png"],
     features: [
       "Détection automatique des types de colonnes",
       "Adaptation intelligente des analyses",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     language: "Python",
     topics: ["Notes", "Education", "Audio", "Next.js"],
     stars: 0,
-    images: [],
+    images: ["/images/sesh.png"],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
   {
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     language: "Python",
     topics: ["Social Media", "Twitter", "LinkedIn", "AI", "Gemini"],
     stars: 1,
-    images: [],
+    images: ["/images/echopost.png"],
     features: [
       "Mode manuel et IA",
       "Génération de contenu avec Gemini",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     language: "Python",
     topics: ["Voice Assistant", "AI", "Whisper", "Face recognition", "TTS"],
     stars: 0,
-    images: [],
+    images: ["/images/thoth.png", "/images/thoth2.png"],
     features: [
       "Reconnaissance vocale Whisper",
       "Reconnaissance faciale",
@@ -232,7 +232,7 @@ export const projects: Project[] = [
     language: "Python",
     topics: ["Productivity", "AI", "File Management", "CLI", "GLM"],
     stars: 0,
-    images: [],
+    images: ["/images/organizer.png"],
     features: [
       "Analyse intelligente avec GLM 4.7",
       "Groupement sémantique par thématique",
@@ -455,6 +455,39 @@ export const projects: Project[] = [
       "GSAP",
       "IndexedDB",
       "PWA",
+    ],
+  },
+  {
+    id: "yatouze",
+    name: "Yatouze",
+    description: {
+      fr: "Plateforme CRM innovante pour automatiser la gestion d'entreprise avec tableaux de bord interactifs",
+      en: "Innovative CRM platform to automate business management with interactive dashboards",
+    },
+    longDescription: {
+      fr: "Yatouze est une plateforme CRM innovante conçue pour simplifier et automatiser les processus de gestion d'entreprise. L'application permet de gérer les relations humaines, les projets et de visualiser des données à travers des tableaux de bord interactifs. Le système facilite la collaboration et améliore la productivité des employés grâce à une interface moderne et intuitive. Un module d'importation permet d'ajouter facilement des contacts depuis des fichiers Excel.",
+      en: "Yatouze is an innovative CRM platform designed to simplify and automate business management processes. The application allows managing human relationships, projects and visualizing data through interactive dashboards. The system facilitates collaboration and improves employee productivity through a modern and intuitive interface. An import module allows easily adding contacts from Excel files.",
+    },
+    githubUrl: "https://github.com/Yas246/Yatouze",
+    demoUrl: "https://yatouze.com/",
+    language: "TypeScript",
+    topics: ["CRM", "Management", "Dashboard", "Next.js"],
+    stars: 0,
+    images: ["/images/Yatouze.png", "/images/Yatouze2.png"],
+    features: [
+      "Gestion des relations humaines",
+      "Gestion de projets",
+      "Tableaux de bord interactifs",
+      "Importation de contacts depuis Excel",
+      "Interface moderne et intuitive",
+      "Prise de décision éclairée grâce aux données",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Dashboard",
+      "Excel Integration",
     ],
   },
 ];

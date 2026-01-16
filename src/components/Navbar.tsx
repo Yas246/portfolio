@@ -19,6 +19,7 @@ export default function Navbar() {
     { name: t("home"), path: "/" },
     { name: t("stack1"), path: "/stack" },
     { name: t("projects1"), path: "/projets" },
+    { name: t("blog1"), path: "/blog" },
     { name: t("contacts1"), path: "/contact" },
   ];
 
