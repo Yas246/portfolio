@@ -1,7 +1,7 @@
 "use client";
 
 import gsap from "gsap";
-import { Mail, MessageSquare, Phone, Linkedin } from "lucide-react";
+import { Linkedin, Mail, MessageSquare, Phone } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next"; // Import useTranslation
 import PageTitle from "../../components/PageTitle";
@@ -27,12 +27,12 @@ export default function Contact() {
     <>
       <PageTitle title="Contact" />
       <div className="min-h-[calc(100vh-180px)] px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-        <div className="mx-auto max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 dark:text-white">
             {t("contact.title")} {/* Translate the title */}
           </h2>
 
-          <div ref={formRef} className="p-8 mx-auto max-w-md glass-panel">
+          <div ref={formRef} className="max-w-md p-8 mx-auto glass-panel">
             <div className="grid grid-cols-1 gap-8">
               <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300">
                 <Mail className="w-6 h-6" />
@@ -40,7 +40,7 @@ export default function Contact() {
                   href="mailto:bigwabi01@gmail.com"
                   className="hover:text-blue-500"
                 >
-                  bigwabi01@gmail.com
+                  wabiyassar@gmail.com
                 </a>
               </div>
 
