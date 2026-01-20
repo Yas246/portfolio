@@ -54,7 +54,7 @@ export const projects: Project[] = [
   },
   {
     id: "argus",
-    name: "Argus - Analyseur de Données Universel",
+    name: "Argus - Analyseur Universel de Données",
     description: {
       fr: "Système d'analyse de données intelligent capable d'analyser automatiquement n'importe quel dataset et trouver les liens entre les données",
       en: "Intelligent data analysis system capable of automatically analyzing any dataset and find the links between the data",
